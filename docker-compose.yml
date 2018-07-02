@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    env_file:
+      - dev.env
+    ports:
+      - 7777:7777
+    volumes:
+      - .:/home/node/code
